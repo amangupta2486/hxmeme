@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <style>
+        img{
+    width: 300px;
+    height: 300px;
+}
+div{
+    align-items: center;
+    margin-left: 100px;
+}
+body{
+    background-color: beige;
+}
+#data{
+    background-color: beige;
+    width:35%;
+    display: inline;
+}
+#3{
+    border: 2px;
+    color: black;
+}
+    </style>
+    <script >
+
+fetch("http://fxmeme.herokuapp.com/memes")
+    .then(data => data.json())
+    .then(data => {
+        data.forEach((u)=>{
+            document.getElementById('data').innerHTML += '<div id=1>'+
+      "<h1>" + u.name + "</h1>" + 
+      "<p>" + u.caption + "</p>" + 
+      '<img src="'+u.url+'"/>'+
+      '</div>';
+
+     // here is the magic
+
+        });
+      
+
+    })
+    .catch(function(err) {
+      console.log('Fetch Error :-S', err);
+    });
+
+    </script>
+    <title>Stock Screener</title>
+
+</head>
+<body>
+    <div id="3">
+    <form action="/" onsubmit="return check();">
+        <p>Meme Owner</p>
+        <input type="text" id = "name" name="name" placeholder="Enter your full name" required>   
+        <p>Caption</p>
+        <input type="text" name="caption" placeholder="Be creative with caption" id='caption' >
+        <p>Meme URL</p>
+        <input type="text" name="url" placeholder="Enter url of your meme here" id="url">
+        
+      <button type="submit" onclick="check(event)" name="Submit"><b>Submit</b>  </button>
+    </form>
+</div>
+      
+    <h6></h6>
+    <canvas scroll-behavior: smooth;>
+
+    </canvas>
+
+    <div id="data">
+
+    </div>
+    
+<script>
+    function check(event) {
+            event.preventDefault();
+  fetch('http://fxmeme.herokuapp.com/memes', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+    "Accept": 'application/json',
+  },
+  body: JSON.stringify({
+    name : document.getElementById('name').value,
+    caption : document.getElementById('caption').value,
+    url : document.getElementById('url').value
+  }),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+return true;
+    }
+
+</script>
+</body>
+</html>
