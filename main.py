@@ -7,7 +7,7 @@ from tortoise.models import Model
 from tortoise.contrib.fastapi import register_tortoise
 from tortoise.contrib.pydantic import pydantic_model_creator
 
-templates =Jinja2Templates(directory="../frontend")
+templates =Jinja2Templates(directory="./frontend")
 
 import requests
 import sqlite3
