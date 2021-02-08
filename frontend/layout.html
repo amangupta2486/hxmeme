@@ -35,7 +35,7 @@ body{
 fetch("https://hxmeme.herokuapp.com/memes")
     .then(data => data.json())
     .then(data => {
-        data.forEach((u)=>{
+        Array.prototype.reverse.call(data).forEach((u)=>{
             document.getElementById('data').innerHTML += '<div id=1>'+
       "<h1>" + u.name + "</h1>" + 
       "<p>" + u.caption + "</p>" + 
