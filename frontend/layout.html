@@ -9,16 +9,17 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <style>
-        img{
+       img{
     width: 300px;
     height: 300px;
+    padding-left: 30px;
 }
 div{
     align-items: center;
     margin-left: 100px;
 }
 body{
-    background-color: beige;
+    background-color:antiquewhite;
 }
 #data{
     background-color: beige;
@@ -29,6 +30,12 @@ body{
     border: 2px;
     color: black;
 }
+#1{
+    display: flex;
+    align-items: stretch;
+    background-color:lightsalmon;
+    border: 5px solid ;
+}
     </style>
     <script >
 
@@ -36,7 +43,7 @@ fetch("https://hxmeme.herokuapp.com/memes")
     .then(data => data.json())
     .then(data => {
         Array.prototype.reverse.call(data).forEach((u)=>{
-            document.getElementById('data').innerHTML += '<div id=1>'+
+            document.getElementById('data').innerHTML += '<div id=1 style="border: 1px solid black; width=100px; background-color: lightsalmon ;border-radius: 25px;height: 400px;width: 400px;padding-bottom: 40px;padding-right:10px">'+
       "<h1>" + u.name + "</h1>" + 
       "<p>" + u.caption + "</p>" + 
       '<img src="'+u.url+'"/>'+
