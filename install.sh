@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pip install -r requirements.txt
+sed 's/#.*//' requirements.txt | xargs sudo apt-get install
 
