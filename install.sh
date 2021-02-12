@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sed 's/#.*//' requirements.txt | xargs sudo apt-get install
+sed 's/#.*//' requirements1.txt | xargs sudo apt-get install
 
