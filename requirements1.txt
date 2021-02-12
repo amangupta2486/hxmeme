@@ -1,0 +1,12 @@
+aiosqlite
+databases
+fastapi
+Hypercorn
+Jinja2
+pydantic
+requests
+SQLAlchemy
+tortoise-orm
+uvicorn
+
+
