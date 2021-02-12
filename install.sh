@@ -12,5 +12,12 @@ sudo apt-get install pydantic
 sudo apt-get install requests
 sudo apt-get install SQLAlchemy
 sudo apt-get install tortoise-orm
+cd ..
+cd ~/.local/bin/
 sudo apt-get install uvicorn
+cd ..
+cd ..
+cd hxmeme
+
+
 
