@@ -15,6 +15,10 @@ sudo pip3 install -y pipenv
 
 pipenv shell
 
+chmod +x sleep1.sh
+
+./sleep1.sh
+
 sudo apt install -y gunicorn uvicorn
 
 # Run the user’s installation steps which will install any necessary dependencies required for the server to run, with sudo permission
