@@ -2,6 +2,6 @@
 
 #sed 's/#.*//' requirements1.txt | xargs sudo apt-get install
 
-sudo pip install -r requirements.txt
+sudo pip install -r requirements1.txt
 
 
