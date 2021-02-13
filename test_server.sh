@@ -11,6 +11,8 @@ sudo apt install -y python3-pip
 
 sudo apt-get install -y gunicorn uvicorn
 
+sudo pip install fastapi
+
 #sudo pip3 install -y pipenv
 
 #pipenv shell
