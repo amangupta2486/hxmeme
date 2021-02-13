@@ -10,5 +10,5 @@ requests
 SQLAlchemy
 tortoise-orm
 uvicorn
-
+PyPika
 
