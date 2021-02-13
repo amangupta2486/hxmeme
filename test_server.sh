@@ -11,15 +11,15 @@ sudo apt install -y python3-pip
 
 sudo apt-get install -y gunicorn uvicorn
 
-sudo pip3 install -y pipenv
+#sudo pip3 install -y pipenv
 
-pipenv shell
+#pipenv shell
 
-chmod +x sleep1.sh
+#chmod +x sleep1.sh
 
-./sleep1.sh
+#./sleep1.sh
 
-sudo apt install -y gunicorn uvicorn
+#sudo apt install -y gunicorn uvicorn
 
 # Run the user’s installation steps which will install any necessary dependencies required for the server to run, with sudo permission
 
