@@ -5,6 +5,17 @@
 
 # cd to the cloned repo directory
 
+sudo apt update
+
+sudo apt install -y python3-pip
+
+sudo apt-get install -y gunicorn uvicorn
+
+sudo pip3 install -y pipenv
+
+pipenv shell
+
+sudo apt install -y gunicorn uvicorn
 
 # Run the user’s installation steps which will install any necessary dependencies required for the server to run, with sudo permission
 
