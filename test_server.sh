@@ -7,6 +7,18 @@
 
 sudo apt update
 
+sudo apt-get install -y python3.6
+
+sudo apt update -y
+
+sudo apt install python3.8
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 
+
+sudo update-alternatives --config python3
+
 sudo apt install -y python3-pip
 
 sudo apt-get install -y gunicorn uvicorn
