@@ -25,6 +25,8 @@ sudo apt-get install -y gunicorn uvicorn
 
 sudo pip install fastapi
 
+sudo pip install tortoise-orm
+
 #sudo pip3 install -y pipenv
 
 #pipenv shell
